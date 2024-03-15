@@ -1,0 +1,39 @@
+
+Como Funciona o Algoritmo da FFT (Transformada Rápida de Fourier)?
+
+A Transformada Rápida de Fourier (FFT) é um algoritmo eficiente para calcular a Transformada Discreta de Fourier (DFT) de um sinal. 
+A DFT converte um sinal do domínio do tempo para o domínio da frequência, revelando quais frequências estão presentes no sinal e com qual intensidade.
+
+1. Dividir e Conquistar:
+
+A FFT divide o cálculo da DFT em etapas menores, utilizando o princípio de "dividir e conquistar". A DFT de um sinal de tamanho N pode ser dividida em N/2 DFTs de sinais de tamanho N/2. Essa divisão é recursiva, dividindo os subvetores até que o tamanho seja 1.
+
+2. Algoritmo Cooley-Tukey:
+
+O algoritmo Cooley-Tukey é a base da FFT. Ele explora a simetria e periodicidade da DFT para reduzir o número de cálculos necessários. O algoritmo usa a propriedade de que a DFT de um sinal real é simétrica e a DFT de um sinal imaginário é anti-simétrica.
+
+3. Fator de Radix:
+
+A FFT usa um fator de radix para dividir o problema em subproblemas menores. O radix mais comum é 2, o que significa que o sinal é dividido em subvetores de tamanho 2. Existem também implementações com radix 4, 8 e outros.
+
+4. Vantagens:
+
+Eficiência: A FFT é muito mais eficiente que a DFT direta, especialmente para sinais de grande tamanho.
+Velocidade: A FFT permite calcular a DFT de um sinal em tempo real, o que é essencial para diversas aplicações.
+Versatilidade: A FFT pode ser utilizada em diversas áreas, como processamento de áudio, análise de vibrações, imagens e telecomunicações.
+5. Desvantagens:
+
+Complexidade: A implementação da FFT pode ser complexa, especialmente para quem não tem familiaridade com matemática e programação.
+Erro de arredondamento: A FFT pode introduzir erros de arredondamento nos cálculos, especialmente para sinais com grande amplitude.
+Exemplo de Como a FFT Funciona:
+
+Considere um sinal de 8 pontos:
+
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+A FFT divide o sinal em dois subvetores de tamanho 4:
+
+x1 = [1, 3, 5, 7]
+x2 = [2, 4, 6, 8]
+A FFT calcula a DFT de cada subvetor e combina os resultados para obter a DFT do sinal original.
+
+O resultado da FFT é um vetor de 8 pontos, onde cada ponto representa a amplitude de uma frequência específica no sinal original.

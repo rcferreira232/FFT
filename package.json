@@ -1,0 +1,15 @@
+{
+  "name": "fourier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fourier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jsfft": "^0.0.4",
+    "mathjs": "^12.4.0"
+  }
+}
